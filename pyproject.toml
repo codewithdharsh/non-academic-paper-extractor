@@ -1,0 +1,26 @@
+[project]
+name = "aganitha-papers-cli"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "codewithdharsh",email = "dharsh20102003@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests (>=2.32.4,<3.0.0)",
+    "pandas (>=2.3.1,<3.0.0)",
+    "lxml (>=6.0.0,<7.0.0)",
+    "biopython (>=1.85,<2.0)"
+]
+
+[tool.poetry]
+packages = [{include = "aganitha_papers_cli", from = "src"}]
+[tool.poetry.scripts]
+get-papers-list = "aganitha_papers_cli.cli:main"
+
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
